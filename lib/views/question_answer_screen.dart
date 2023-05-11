@@ -13,6 +13,7 @@ class QuestionAnswerScreen extends StatefulWidget {
       : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _QuestionAnswerScreenState createState() => _QuestionAnswerScreenState();
 }
 
@@ -42,7 +43,7 @@ class _QuestionAnswerScreenState extends State<QuestionAnswerScreen> {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
               child: QuestionWidget(question: quizQuestion!.question!),
             ),
             Column(
@@ -68,7 +69,7 @@ class _QuestionAnswerScreenState extends State<QuestionAnswerScreen> {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => SummaryScreen(),
+                  builder: (context) => const SummaryScreen(),
                 ));
             return;
           }

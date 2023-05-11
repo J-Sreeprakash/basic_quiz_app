@@ -1,6 +1,6 @@
-import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:basic_quiz_app/model/question_type.dart';
 import 'package:flutter/material.dart';
+import 'package:just_audio/just_audio.dart';
 
 import '../model/question.dart';
 
@@ -46,15 +46,22 @@ const QuestionWidget({ Key? key, required this.question }) : super(key: key);
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
          children: [
-           AudioWidget.network(child: Icon(Icons.play_circle), url: question!.url!),
+          getPlayer(question!.url!)
          ],
        );
     }
-    return CircularProgressIndicator();
+    return const CircularProgressIndicator();
   }
 
   Widget getQuestionStringFormat(String value)
   {
-    return Text(value, style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900),);
+    return Text(value, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900),);
+  }
+  
+  Widget getPlayer(String value)
+  {
+    var  player=AudioPlayer();
+   player.setUrl(value);
+    return GestureDetector(onTap:() => player.play(),onDoubleTap: () => player.pause(),child: const Icon(Icons.play_circle_rounded,size: 50,));
   }
 }

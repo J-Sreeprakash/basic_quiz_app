@@ -1,7 +1,7 @@
-import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:basic_quiz_app/model/option_type.dart';
 import 'package:basic_quiz_app/model/question.dart';
 import 'package:flutter/material.dart';
+import 'package:just_audio/just_audio.dart';
 
 
 typedef OptionCallback = void Function(int value);
@@ -63,7 +63,7 @@ Widget getAnswerModel()
            Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
              children: [
-               AudioWidget.network(child: Icon(Icons.play_circle,size: 50,), url: option!.url!),
+              getPlayer(option!.url!),
                ElevatedButton(
             onPressed: () {
               onTapped!(index!);
@@ -72,11 +72,18 @@ Widget getAnswerModel()
              ],
            );
   }
-  return CircularProgressIndicator();
+  return const CircularProgressIndicator();
 }
 
 Widget getAnswerStringFormat(String value)
 {
   return Text(value,style: const TextStyle(fontSize: 16,fontWeight: FontWeight.w700));
 }
+ Widget getPlayer(String value)
+  {
+    var  player=AudioPlayer();
+   player.setUrl(value);
+    return GestureDetector(onTap:() => player.play(),onDoubleTap: () => player.pause(),child: const Icon(Icons.play_circle_rounded,size: 50,));
+  }
+  
 }

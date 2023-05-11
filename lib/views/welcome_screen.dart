@@ -1,6 +1,7 @@
 import 'package:basic_quiz_app/model/quiz.dart';
 import 'package:basic_quiz_app/views/question_answer_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:websafe_svg/websafe_svg.dart';
 
 import '../service/quizz_service.dart';
 
@@ -19,8 +20,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.network(
-              "https://media3.giphy.com/media/Ji3lMhjcSiWdFfKJJf/giphy.gif?cid=ecf05e47ovpaj9v1h02k7fnseymwyge18t4lytnd79je1rgn&ep=v1_gifs_related&rid=giphy.gif&ct=g"),
+          WebsafeSvg.asset('assets/front.svg'),
           Padding(
             padding: const EdgeInsets.all(50),
             child: ElevatedButton(
@@ -30,6 +30,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   var quiz = Quiz(questions: quizQuestions);
 
 
+                  // ignore: use_build_context_synchronously
                   Navigator.push(
                       context,
                       MaterialPageRoute(                        
@@ -41,10 +42,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
                 )),
           ),
-          Center(
-            child: Image.network(
-                "https://media3.giphy.com/media/Ji3lMhjcSiWdFfKJJf/giphy.gif?cid=ecf05e47ovpaj9v1h02k7fnseymwyge18t4lytnd79je1rgn&ep=v1_gifs_related&rid=giphy.gif&ct=g"),
-          ),
+          
         ],
       ),
     );
