@@ -69,7 +69,7 @@ class _QuestionAnswerScreenState extends State<QuestionAnswerScreen> {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const SummaryScreen(),
+                  builder: (context) =>  SummaryScreen(quizSummary:widget.quiz!.getSummary()),
                 ));
             return;
           }

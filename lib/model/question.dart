@@ -13,7 +13,7 @@ class QuizQuestion {
   final String? id;
   final Question? question;
   final List<Option> options;
-  final num? answer;
+  final int? answer;
   final List<String> tags;
 
   factory QuizQuestion.fromJson(Map<String, dynamic> json) {

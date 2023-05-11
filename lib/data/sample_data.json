@@ -47,22 +47,22 @@
         {
           "type": "image",
           "caption": "Choice 1",
-          "url": "https://storage.cloud.google.com/quizdb/image.png"
+          "url": "https://storage.googleapis.com/quizdb/image.png"
         },
         {
           "type": "image",
           "caption": "Choice 2",
-          "url": "https://storage.cloud.google.com/quizdb/image.png"
+          "url": "https://storage.googleapis.com/quizdb/image.png"
         },
         {
           "type": "image",
           "caption": "Choice 3",
-          "url": "https://storage.cloud.google.com/quizdb/image.png"
+          "url": "https://storage.googleapis.com/quizdb/image.png"
         },
         {
           "type": "image",
           "caption": "Choice 4",
-          "url": "https://storage.cloud.google.com/quizdb/image.png"
+          "url": "https://storage.googleapis.com/quizdb/image.png"
         }
       ],
       "answer": 2,
@@ -84,22 +84,22 @@
         {
           "type": "audio",
           "caption": "Choice 1",
-          "url": "https://storage.cloud.google.com/quizdb/audio.mp3"
+          "url": "https://storage.googleapis.com/quizdb/audio.mp3"
         },
         {
           "type": "audio",
           "caption": "Choice 2",
-          "url": "https://storage.cloud.google.com/quizdb/audio.mp3"
+          "url": "https://storage.googleapis.com/quizdb/audio.mp3"
         },
         {
           "type": "audio",
           "caption": "Choice 3",
-          "url": "https://storage.cloud.google.com/quizdb/audio.mp3"
+          "url": "https://storage.googleapis.com/quizdb/audio.mp3"
         },
         {
           "type": "audio",
           "caption": "Choice 4",
-          "url": "https://storage.cloud.google.com/quizdb/audio.mp3"
+          "url": "https://storage.googleapis.com/quizdb/audio.mp3"
         }
       ],
       "answer": 3,
@@ -115,7 +115,7 @@
       "question": {
         "type": "image",
         "caption": "What is the answer for this question?",
-        "url": "https://storage.cloud.google.com/quizdb/image.png"
+        "url": "https://storage.googleapis.com/quizdb/image.png"
       },
       "options": [
         {
@@ -152,28 +152,28 @@
       "question": {
         "type": "image",
         "caption": "What is the answer for this question?",
-        "url": "https://storage.cloud.google.com/quizdb/image.png"
+        "url": "https://storage.googleapis.com/quizdb/image.png"
       },
       "options": [
         {
           "type": "image",
           "caption": "Choice 1",
-          "url": "https://storage.cloud.google.com/quizdb/image.png"
+          "url": "https://storage.googleapis.com/quizdb/image.png"
         },
         {
           "type": "image",
           "caption": "Choice 2",
-          "url": "https://storage.cloud.google.com/quizdb/image.png"
+          "url": "https://storage.googleapis.com/quizdb/image.png"
         },
         {
           "type": "image",
           "caption": "Choice 3",
-          "url": "https://storage.cloud.google.com/quizdb/image.png"
+          "url": "https://storage.googleapis.com/quizdb/image.png"
         },
         {
           "type": "image",
           "caption": "Choice 4",
-          "url": "https://storage.cloud.google.com/quizdb/image.png"
+          "url": "https://storage.googleapis.com/quizdb/image.png"
         }
       ],
       "answer": 2,
@@ -189,28 +189,28 @@
       "question": {
         "type": "image",
         "caption": "What is the answer for this question?",
-        "url": "https://storage.cloud.google.com/quizdb/image.png"
+        "url": "https://storage.googleapis.com/quizdb/image.png"
       },
       "options": [
         {
           "type": "audio",
           "caption": "Choice 1",
-          "url": "https://storage.cloud.google.com/quizdb/audio.mp3"
+          "url": "https://storage.googleapis.com/quizdb/audio.mp3"
         },
         {
           "type": "audio",
           "caption": "Choice 2",
-          "url": "https://storage.cloud.google.com/quizdb/audio.mp3"
+          "url": "https://storage.googleapis.com/quizdb/audio.mp3"
         },
         {
           "type": "audio",
           "caption": "Choice 3",
-          "url": "https://storage.cloud.google.com/quizdb/audio.mp3"
+          "url": "https://storage.googleapis.com/quizdb/audio.mp3"
         },
         {
           "type": "audio",
           "caption": "Choice 4",
-          "url": "https://storage.cloud.google.com/quizdb/audio.mp3"
+          "url": "https://storage.googleapis.com/quizdb/audio.mp3"
         }
       ],
       "answer": 3,
@@ -226,7 +226,7 @@
       "question": {
         "type": "audio",
         "caption": "What is the answer for this audio question?",
-        "url": "https://storage.cloud.google.com/quizdb/audio.mp3"
+        "url": "https://storage.googleapis.com/quizdb/audio.mp3"
       },
       "options": [
         {
@@ -263,28 +263,28 @@
       "question": {
         "type": "audio",
         "caption": "What is the answer for this audio question?",
-        "url": "https://storage.cloud.google.com/quizdb/audio.mp3"
+        "url": "https://storage.googleapis.com/quizdb/audio.mp3"
       },
       "options": [
         {
           "type": "image",
           "caption": "Choice 1",
-          "url": "https://storage.cloud.google.com/quizdb/image.png"
+          "url": "https://storage.googleapis.com/quizdb/image.png"
         },
         {
           "type": "image",
           "caption": "Choice 2",
-          "url": "https://storage.cloud.google.com/quizdb/image.png"
+          "url": "https://storage.googleapis.com/quizdb/image.png"
         },
         {
           "type": "image",
           "caption": "Choice 3",
-          "url": "https://storage.cloud.google.com/quizdb/image.png"
+          "url": "https://storage.googleapis.com/quizdb/image.png"
         },
         {
           "type": "image",
           "caption": "Choice 4",
-          "url": "https://storage.cloud.google.com/quizdb/image.png"
+          "url": "https://storage.googleapis.com/quizdb/image.png"
         }
       ],
       "answer": 2,
@@ -300,28 +300,28 @@
       "question": {
         "type": "audio",
         "caption": "What is the answer for this audio question?",
-        "url": "https://storage.cloud.google.com/quizdb/audio.mp3"
+        "url": "https://storage.googleapis.com/quizdb/audio.mp3"
       },
       "options": [
         {
           "type": "audio",
           "caption": "Choice 1",
-          "url": "https://storage.cloud.google.com/quizdb/audio.mp3"
+          "url": "https://storage.googleapis.com/quizdb/audio.mp3"
         },
         {
           "type": "audio",
           "caption": "Choice 2",
-          "url": "https://storage.cloud.google.com/quizdb/audio.mp3"
+          "url": "https://storage.googleapis.com/quizdb/audio.mp3"
         },
         {
           "type": "audio",
           "caption": "Choice 3",
-          "url": "https://storage.cloud.google.com/quizdb/audio.mp3"
+          "url": "https://storage.googleapis.com/quizdb/audio.mp3"
         },
         {
           "type": "audio",
           "caption": "Choice 4",
-          "url": "https://storage.cloud.google.com/quizdb/audio.mp3"
+          "url": "https://storage.googleapis.com/quizdb/audio.mp3"
         }
       ],
       "answer": 3,
@@ -337,28 +337,28 @@
       "question": {
         "type": "image",
         "caption": "What is the answer for this question?",
-        "url": "https://storage.cloud.google.com/quizdb/image.png"
+        "url": "https://storage.googleapis.com/quizdb/image.png"
       },
       "options": [
         {
           "type": "audio",
           "caption": "Choice 1",
-          "url": "https://storage.cloud.google.com/quizdb/audio.mp3"
+          "url": "https://storage.googleapis.com/quizdb/audio.mp3"
         },
         {
           "type": "audio",
           "caption": "Choice 2",
-          "url": "https://storage.cloud.google.com/quizdb/audio.mp3"
+          "url": "https://storage.googleapis.com/quizdb/audio.mp3"
         },
         {
           "type": "audio",
           "caption": "Choice 3",
-          "url": "https://storage.cloud.google.com/quizdb/audio.mp3"
+          "url": "https://storage.googleapis.com/quizdb/audio.mp3"
         },
         {
           "type": "audio",
           "caption": "Choice 4",
-          "url": "https://storage.cloud.google.com/quizdb/audio.mp3"
+          "url": "https://storage.googleapis.com/quizdb/audio.mp3"
         }
       ],
       "answer": 3,

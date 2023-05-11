@@ -13,7 +13,7 @@ class Quiz {
 
   QuizQuestion? getNextQuestion() {
     currentIndex++;
-    if (currentIndex < questions!.length - 1) {
+    if (currentIndex < questions!.length) {
       return questions![currentIndex];
     }
     return null;
