@@ -12,11 +12,15 @@ const QuestionWidget({ Key? key, required this.question }) : super(key: key);
   Widget build(BuildContext context){
     return SizedBox(
       width: 500,
-      height: 400,
+      height: 200,
       child: Card(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            getQuestionModel()
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: getQuestionModel(),
+            )
           ],
         ),
       ),
@@ -27,22 +31,14 @@ const QuestionWidget({ Key? key, required this.question }) : super(key: key);
   {
     if(question!.type==QuestionType.text)
     {
-      return Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          getQuestionStringFormat(question!.caption!),
-        ],
-      );
+      return 
+          getQuestionStringFormat(question!.caption!);
+        
     }
     else if(question!.type==QuestionType.image)
     {
-      return Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Image.network(question!.url!,width: 250,height: 250),
-        ],
-      );
+      return 
+          Image.network(question!.url!,width: 100);
     }
     else if(question!.type==QuestionType.audio)
     {

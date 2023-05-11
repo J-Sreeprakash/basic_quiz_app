@@ -25,7 +25,7 @@ class Quiz {
 
   int getCurrent()
   {
-    return currentIndex;
+    return currentIndex+1;
   }
 
   void answerQuestion(int optionChosen) {

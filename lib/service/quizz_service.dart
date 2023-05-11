@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import '../model/question.dart';
 
 //url for API Result
-const quizzApiUrl='https://storage.googleapis.com/quizdb/quiz.json';
+const quizzApiUrl='https://storage.googleapis.com/quizdb/dummyquiz.json';
 
 //create a future function 
 Future<List<QuizQuestion>>getQuestionsFromService()async

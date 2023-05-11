@@ -21,7 +21,10 @@ const AnswerWidget({ Key? key ,required this.option,required this.index,required
        child: Card(
         child: Column(
           children: [
-            getAnswerModel()
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: getAnswerModel(),
+            )
           ],
         ),
       ),
@@ -32,39 +35,42 @@ Widget getAnswerModel()
 {
   if(option!.type==OptionType.text)
   {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Card(
-          child:ElevatedButton(
+    return 
+        ElevatedButton(
             onPressed: () {
               onTapped!(index!);
             },
-            child: getAnswerStringFormat(option!.caption!)),
-        )
-      ],
-    );
+            child: getAnswerStringFormat(option!.caption!));
   }
   else if(option!.type==OptionType.image)
   {
-    return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-            Image.network(option!.url!)
-        ],
-      ),
-    );
+    return 
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Image.network(option!.url!,width: 100,),
+                 ElevatedButton(
+            onPressed: () {
+              onTapped!(index!);
+            },
+            child: getAnswerStringFormat(option!.caption!))
+              ],
+            );
   }
   else if(option!.type==OptionType.audio)
   {
-    return Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-         children: [
-           AudioWidget.network(child: Icon(Icons.play_circle), url: option!.url!),
-         ],
-       );
+    return 
+           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+             children: [
+               AudioWidget.network(child: Icon(Icons.play_circle,size: 50,), url: option!.url!),
+               ElevatedButton(
+            onPressed: () {
+              onTapped!(index!);
+            },
+            child: getAnswerStringFormat(option!.caption!))
+             ],
+           );
   }
   return CircularProgressIndicator();
 }
