@@ -10,11 +10,12 @@ class AnswerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 250,
+      height: 400,
       width: 500,
       child: Card(
         elevation: 5,
         child: Column(
+          
           children: [
             Padding(
               padding: const EdgeInsets.only(top: 25),
@@ -34,13 +35,22 @@ class AnswerWidget extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       child: SizedBox(
         width: 500,
+        height: 50,
         child: Card(
           elevation: 5,
           color: Colors.grey,
-            child: Text(
-          value,
-          style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
-        )),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                          value,
+                          style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
+                        ),
+                ),
+              ],
+            )),
       ),
     );
   }
