@@ -1,9 +1,5 @@
 enum QuestionType { text, image, audio }
 
-
-
-
-
 QuestionType fromQuestionTypeString(String type) {
   if (type == "text") {
     return QuestionType.text;
@@ -15,6 +11,3 @@ QuestionType fromQuestionTypeString(String type) {
 
   return QuestionType.text;
 }
-
-
-

@@ -1,68 +1,76 @@
-
+import 'package:assets_audio_player/assets_audio_player.dart';
+import 'package:basic_quiz_app/model/option_type.dart';
+import 'package:basic_quiz_app/model/question.dart';
 import 'package:flutter/material.dart';
 
-import '../model/question.dart';
+
+typedef OptionCallback = void Function(int value);
 
 class AnswerWidget extends StatelessWidget {
-  final Options? options;
-  const AnswerWidget({Key? key, this.options}) : super(key: key);
+ final Option? option;
+ final int? index;
+
+ final OptionCallback? onTapped;
+
+const AnswerWidget({ Key? key ,required this.option,required this.index,required this.onTapped}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
     return SizedBox(
-      height: 400,
       width: 500,
-      child: Card(
-        elevation: 5,
+       child: Card(
         child: Column(
-          
           children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 25),
-              child: getAnswer('a) 8'),
-            ),
-            getAnswer('b) 7'),
-            getAnswer('c) 5'),
-            getAnswer('d) 2')
+            getAnswerModel()
           ],
         ),
       ),
     );
   }
 
-  Widget getAnswer(String value) {
-    return Padding(
-      padding: const EdgeInsets.all(10),
-      child: SizedBox(
-        width: 500,
-        height: 50,
-        child: Card(
-          elevation: 5,
-          color: Colors.grey,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                          value,
-                          style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
-                        ),
-                ),
-              ],
-            )),
+Widget getAnswerModel()
+{
+  if(option!.type==OptionType.text)
+  {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Card(
+          child:ElevatedButton(
+            onPressed: () {
+              onTapped!(index!);
+            },
+            child: getAnswerStringFormat(option!.caption!)),
+        )
+      ],
+    );
+  }
+  else if(option!.type==OptionType.image)
+  {
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+            Image.network(option!.url!)
+        ],
       ),
     );
   }
-
-  Widget getAnswerFormat() {
-    if (options!.type == 'text') {
-      return Text(options!.caption!);
-    } else if (options!.type == 'image') {
-      return Image.network(options!.url!);
-    } else if (options!.type == 'audio') {
-      return const Icon(Icons.play_arrow_rounded);
-    }
-    return const CircularProgressIndicator();
+  else if(option!.type==OptionType.audio)
+  {
+    return Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+         children: [
+           AudioWidget.network(child: Icon(Icons.play_circle), url: option!.url!),
+         ],
+       );
   }
+  return CircularProgressIndicator();
+}
+
+Widget getAnswerStringFormat(String value)
+{
+  return Text(value,style: const TextStyle(fontSize: 16,fontWeight: FontWeight.w700));
+}
 }

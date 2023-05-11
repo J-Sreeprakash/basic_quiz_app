@@ -12,7 +12,7 @@ class QuizQuestion {
 
   final String? id;
   final Question? question;
-  final List<Options> options;
+  final List<Option> options;
   final num? answer;
   final List<String> tags;
 
@@ -20,7 +20,7 @@ class QuizQuestion {
     return QuizQuestion(
       id: json["id"],
       question: json["question"] == null ? null : Question.fromJson(json["question"]),
-      options: json["options"] == null ? [] : List<Options>.from(json["options"]!.map((x) => Question.fromJson(x))),
+      options: json["options"] == null ? [] : List<Option>.from(json["options"]!.map((x) => Option.fromJson(x))),
       answer: json["answer"],
       tags: json["tags"] == null ? [] : List<String>.from(json["tags"]!.map((x) => x)),
     );
@@ -47,8 +47,8 @@ class Question {
   }
 }
 
-class Options {
-  Options({
+class Option {
+  Option({
     required this.type,
     required this.caption,
     required this.url,
@@ -58,8 +58,8 @@ class Options {
   final String? caption;
   final String? url;
 
-  factory Options.fromJson(Map<String, dynamic> json) {
-    return Options(
+  factory Option.fromJson(Map<String, dynamic> json) {
+    return Option(
       type: fromOptionTypeString(json["type"]),
       caption: json["caption"],
       url: json["url"],
