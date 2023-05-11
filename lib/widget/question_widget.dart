@@ -4,7 +4,7 @@ import '../model/question.dart';
 
 
 class QuestionWidget extends StatelessWidget {
-  final Tion? tion;
+  final Question? tion;
 const QuestionWidget({ Key? key , this.tion }) : super(key: key);
 
   @override
@@ -34,7 +34,7 @@ Widget getStringFormat(String value)
   return Text(value,style: const TextStyle(fontSize: 20,fontWeight: FontWeight.w900),);
 }
 
-Widget getQuestionFormat(List<Question> question)
+Widget getQuestionFormat(List<QuizQuestion> question)
 {
    if(tion!.type=='text')
    {

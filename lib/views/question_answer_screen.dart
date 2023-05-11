@@ -1,26 +1,40 @@
+import 'package:basic_quiz_app/model/question.dart';
+import 'package:basic_quiz_app/model/quiz.dart';
 import 'package:flutter/material.dart';
 
 import '../widget/answer_widget.dart';
 import '../widget/question_widget.dart';
 
 class QuestionAnswerScreen extends StatefulWidget {
-  const QuestionAnswerScreen({Key? key}) : super(key: key);
+
+  final Quiz? quiz;
+
+  const QuestionAnswerScreen({Key? key, required this.quiz}) : super(key: key);
 
   @override
   _QuestionAnswerScreenState createState() => _QuestionAnswerScreenState();
 }
 
 class _QuestionAnswerScreenState extends State<QuestionAnswerScreen> {
+
+  QuizQuestion? quizQuestion;
+
+  @override
+  void initState() {
+    quizQuestion = widget.quiz!.getNextQuestion();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
           title: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
-          Text(' 1 '),
-          Icon(Icons.psychology_alt_outlined),
-          Text(' 10 ')
+        children:  [
+          Text( widget.quiz!.getCurrent().toString()),
+          const Icon(Icons.psychology_alt_outlined),
+            Text( widget.quiz!.getTotal().toString()),
         ],
       )),
       body: Column(
